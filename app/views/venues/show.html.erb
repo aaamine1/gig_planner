@@ -1,15 +1,20 @@
-<h1>Venues#show</h1>
-<p>Find me in app/views/venues/show.html.erb</p>
 
-<ul>
-<li><%= @venue.name %></li>
-<li><%= @venue.price%> </li>
-<li> <%= @venue.square_meter%> </li>
-<li> <%= @venue.capacity%> </li>
-<li> <%= @venue.location%> </li>
-<li> <%= @venue.status%> true = available </li>
-</ul>
 
-<%= link_to "make a booking", new_venue_booking_path(@venue)%>
-<%= link_to "Delete this Venue", venue_path(@venue), method: :delete, class: "btn btn-outline-danger", data: { confirm: "Are you sure you want to delete this venue?" } %>
-<%= link_to "return to all venues", venues_path(@venue), class: "btn btn-flat"%>
+<div class="container">
+  <h1><%= @venue.name %></h1>
+
+   <%= link_to "return to all venues", venues_path(@venue), class: "btn btn-flat"%>
+  <ul>
+  <li><%= @venue.name %></li>
+  <li><%= @venue.price%> </li>
+  <li> <%= @venue.square_meter%> </li>
+  <li> <%= @venue.capacity%> </li>
+  <li> <%= @venue.location%> </li>
+  <li> <%= @venue.status%> true = available </li>
+  </ul>
+
+  <%= link_to "Book this!", new_venue_booking_path(@venue), class: "btn btn-success"%>
+  <%= link_to "Delete this Venue", venue_path(@venue), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this venue?" } %>
+
+
+</div>

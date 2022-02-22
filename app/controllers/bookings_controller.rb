@@ -1,12 +1,12 @@
 class BookingsController < ApplicationController
   def new
-    @bookings = Booking.new
+    @booking = Booking.new
     @venue = Venue.find(params[:venue_id])
   end
 
   def create
-    @bookings = Booking.new(booking_params)
-    @venue= Venue.find(params[:venue_id])
+    @booking = Booking.new(booking_params)
+    @venue = Venue.find(params[:venue_id])
     @booking.venue = @venue
     # raise
     if @booking.save
