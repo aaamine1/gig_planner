@@ -10,5 +10,6 @@
 <li> <%= @venue.status%> true = available </li>
 </ul>
 
+<%= link_to "make a booking", new_venue_booking_path(@venue)%>
 
-<p> <%= link_to "return to all venues", venues_path(@venue)%>
+<%= link_to "return to all venues", venues_path(@venue)%>
