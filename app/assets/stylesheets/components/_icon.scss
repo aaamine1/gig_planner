@@ -1,3 +1,32 @@
+.home-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    width: 70%;
+    text-align: center;
+    color: #395B64;
+  }
+
+  h1 {
+    color: #395B64;
+  }
+}
+
+
 .mini-icon {
-  width: 120px;
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+
+.intro-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+
 }
