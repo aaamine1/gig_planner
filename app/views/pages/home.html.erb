@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gig Planner</title>
+</head>
+<body>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://france3-regions.francetvinfo.fr/image/uksNLIldH1kIdGa5sViHTvVizik/1200x900/regions/2022/01/03/61d3134111160_maxpeopleworldtwo171171.jpg);">
+    <div class="container">
+      <h1>Your venue. Made easy.</h1>
+      <p>Book now and think later.</p>
+      <a class="btn btn-flat" href="#">Explore Venues</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row cards-list">
+      <div class="col-4 card">
+        <%= image_tag "icon.png", class: "mini-icon" %>
+      </div>
+      <div class="col-4 card">
+        <%= image_tag "stage.png", class: "mini-icon" %>
+      </div>
+      <div class="col-4 card">
+        <%= image_tag "hands-up.png", class: "mini-icon" %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
