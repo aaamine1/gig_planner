@@ -4,7 +4,7 @@
 
 
 <div class="container">
-  <h1>Book your venue in <%= @venue.location %>!</h1>
+  <h1>Book <%= @venue.name %> in <%= @venue.location %>!</h1>
   <%= simple_form_for [@venue, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
