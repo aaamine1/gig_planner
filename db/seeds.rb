@@ -12,15 +12,6 @@ User.create(email: "b.b@b.b", password: "lion")
 User.create(email: "c.c@c.c", password: "antilope")
 User.create(email: "d.d@d.d", password: "fish")
 
-10.times do Booking.create!(
-  status: "pending",
-  start_date: Date.today,
-  end_date: Date.today + 1.day,
-  user: User.all.sample,
-  venue: Venue.all.sample
-)
-end
-
 10.times do Venue.create!(
   price: [750, 1000, 1250, 1500].sample,
   square_meter: rand(300..1500),
@@ -28,5 +19,13 @@ end
   capacity: rand(100..1200),
   status: "true", # true = available, false = unavailable
   user: User.all.sample
+)
+end
+10.times do Booking.create!(
+  status: "pending",
+  start_date: Date.today,
+  end_date: Date.today + 1.day,
+  user: User.all.sample,
+  venue: Venue.all.sample
 )
 end
