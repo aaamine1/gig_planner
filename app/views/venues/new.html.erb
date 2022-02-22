@@ -1,2 +1,14 @@
 <h1>Venues#new</h1>
 <p>Find me in app/views/venues/new.html.erb</p>
+
+<%= simple_form_for [ @venue ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :capacity %>
+  <%= f.input :square_meter %>
+  <%= f.input :price %>
+  <%= f.submit "add venue", class: "btn btn-primary" %>
+<% end %>
+
+<br>
+<%= link_to "Back to List Venues", venues_path, class: "btn btn-primary"%>
