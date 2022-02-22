@@ -13,6 +13,7 @@ User.create(email: "c.c@c.c", password: "antilope")
 User.create(email: "d.d@d.d", password: "fish")
 
 10.times do Venue.create!(
+  name: Faker::Space.planet,
   price: [750, 1000, 1250, 1500].sample,
   square_meter: rand(300..1500),
   location: ["Brussels", "Antwerp", "Leuven", "Ghent"].sample,
@@ -21,6 +22,7 @@ User.create(email: "d.d@d.d", password: "fish")
   user: User.all.sample
 )
 end
+
 10.times do Booking.create!(
   status: "pending",
   start_date: Date.today,

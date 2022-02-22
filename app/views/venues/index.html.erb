@@ -1,2 +1,10 @@
-<h1>Venues#index</h1>
+<p>header here </p>
 <p>Find me in app/views/venues/index.html.erb</p>
+
+<h1>discover all our venues</h1>
+
+<ul> <% @venues.each do |venue| %>
+<li> <%= link_to venue.name, venue_path(venue) %></li>
+<li> <%= venue.price %></li>
+<% end %>
+</ul>
