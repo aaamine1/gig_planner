@@ -4,7 +4,7 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venue = venue.find(params[:id])
+    @venue = Venue.find(params[:id])
   end
 
   def new
@@ -21,7 +21,7 @@ class VenuesController < ApplicationController
   end
 
   def destroy
-    @venue = venue.find(params[:id])
+    @venue = Venue.find(params[:id])
     @venue.destroy
     redirect_to #dashboard
   end
