@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 end
-  # index for all bookings for current_user
+
+
+  # # index for all bookings for current_user
+
   # get '/dashboard', to: 'pages#dashboard', as: :dashboard
   # patch 'bookings/:id/accept', to: 'bookings#accept', as: :accept_booking
   # patch 'bookings/:id/reject', to: 'bookings#reject', as: :reject_booking

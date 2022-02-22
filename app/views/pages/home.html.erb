@@ -14,18 +14,35 @@
       <%= link_to "Explore Venues", venues_path, class: "btn btn-flat" %>
     </div>
   </div>
-  <div class="container">
-    <div class="row cards-list">
-      <div class="col-4 card">
-        <%= image_tag "icon.png", class: "mini-icon" %>
+  <div class= "container intro-section">
+    <div class="row home-icons">
+      <div class="col home-icon">
+        <%= image_tag "tickets.png", class: "mini-icon" %>
+        <h1>Book your venue</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore (<%= link_to "venues", venues_path%>)</p>
       </div>
-      <div class="col-4 card">
+      <div class="col home-icon">
         <%= image_tag "stage.png", class: "mini-icon" %>
+        <h1>Set your stage</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
       </div>
-      <div class="col-4 card">
+      <div class="col home-icon">
         <%= image_tag "hands-up.png", class: "mini-icon" %>
+        <h1>Fans do the work</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
       </div>
     </div>
   </div>
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    All rights reserved, <strong>Gig Planner</strong> made by <strong>MAG®</strong>
+  </div>
+</div>
 </body>
 </html>
