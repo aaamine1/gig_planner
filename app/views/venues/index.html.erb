@@ -4,7 +4,7 @@
 <h1>discover all our venues</h1>
 <%= link_to "Go Home", root_path, class: "btn btn-flat"%>
 <ul> <% @venues.each do |venue| %>
-<li> <%= link_to venue.name, venue_path(venue) %></li>
-<li> <%= venue.price %></li>
+<li> <%= link_to venue.name, venue_path(venue) %>
+<%= venue.price %></li>
 <% end %>
 </ul>
