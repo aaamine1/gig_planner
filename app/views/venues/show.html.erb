@@ -1,2 +1,14 @@
 <h1>Venues#show</h1>
 <p>Find me in app/views/venues/show.html.erb</p>
+
+<ul>
+<li><%= @venue.name %></li>
+<li><%= @venue.price%> </li>
+<li> <%= @venue.square_meter%> </li>
+<li> <%= @venue.capacity%> </li>
+<li> <%= @venue.location%> </li>
+<li> <%= @venue.status%> true = available </li>
+</ul>
+
+
+<p> <%= link_to "return to all venues", venues_path(@venue)%>
