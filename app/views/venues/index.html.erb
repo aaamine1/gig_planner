@@ -14,6 +14,7 @@
 
         <% @venues.each do |venue| %>
           <div class="card-trip">
+
               <%= image_tag "https://picsum.photos/600/800" %>
                   <div class="card-product-infos">
                       <h2 id="card-name" >  <%= link_to venue.name, venue_path(venue), style: "" %> </h2>
