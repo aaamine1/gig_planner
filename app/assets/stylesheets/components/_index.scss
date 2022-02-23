@@ -7,10 +7,8 @@
 @import "icon";
 @import "card";
 @import "footer";
-@import "cardtrip";
+@import "map";
 @import "show";
-
-
 
 .featuring {
   h1 {
@@ -18,6 +16,8 @@
     color: #395B64;
     font-size: 60px;
     font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   margin-bottom: 30px;
 }

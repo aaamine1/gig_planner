@@ -8,8 +8,8 @@
     flex-grow: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 35px;
+    padding: 0px 16px 16px 16px;
   }
 
 
@@ -17,9 +17,8 @@
     overflow: hidden;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    width: 90%;
-    margin-bottom: 20px;
-  }
+
+}
 
   .card-trip > img {
     height: 200px;
@@ -53,4 +52,9 @@
     right: 16px;
     top: -20px;
     width: 40px;
+  }
+
+  #map {
+    height: 100vh;
+    position: sticky;
   }
