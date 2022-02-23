@@ -29,7 +29,7 @@ locations = ["Anneessens, 1000 Brussels", "Rue Van Artevelde 45, 1000 Bruxelles"
   "Emile Braunplein 39, 9000 Gent",
   "Ancienne Belgique, Boulevard Anspach, Brussels", "16 Villa Gaudelet, Paris"]
 
-10.times do Venue.create!(
+10.times do Venue.create(
   name: Faker::Space.planet,
   price: [750, 1000, 1250, 1500].sample,
   square_meter: rand(300..1500),
@@ -39,15 +39,16 @@ locations = ["Anneessens, 1000 Brussels", "Rue Van Artevelde 45, 1000 Bruxelles"
   image_url: Faker::LoremPixel.image(size: "730x411"),
   user: User.all.sample
 )
+p "done"
 end
 
 10.times do
   start = Date.today + rand(0..150).day
   Booking.create!(
-  status: "pending",
-  start_date: start,
-  end_date: start + 1.day,
-  user: User.all.sample,
-  venue: Venue.all.sample
-  )
+    status: "pending",
+    start_date: start,
+    end_date: start + 1.day,
+    user: User.all.sample,
+    venue: Venue.all.sample
+   )
 end

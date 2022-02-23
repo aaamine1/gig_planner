@@ -1,10 +1,23 @@
-<p>header here </p>
-<p>Find me in app/views/venues/index.html.erb</p>
 
-<h1>discover all our venues</h1>
-<%= link_to "Go Home", root_path, class: "btn btn-flat"%>
-<ul> <% @venues.each do |venue| %>
-<li> <%= link_to venue.name, venue_path(venue) %></li>
-<li> <%= venue.price %></li>
-<% end %>
-</ul>
+
+<div class="featuring mt-3">
+  <h1>Discover our venues</h1>
+</div>
+
+
+
+
+<div class="content">
+    <div class="grid">
+        <% @venues.each do |venue| %>
+          <div class="card-trip">
+              <%= image_tag "https://picsum.photos/600/800" %>
+                  <div class="card-product-infos">
+                      <h2>  <%= link_to venue.name, venue_path(venue) %> </h2>
+                      <p> <%= venue.price %>€ per day</p>
+                      <p> <%= venue.location %></p>
+                  </div>
+          </div>
+        <% end %>
+    </div>
+</div>
