@@ -4,14 +4,16 @@
 
 
 <div class="container">
-  <h1>Book <%= @venue.name %> in <%= @venue.location %>!</h1>
+  <h1 class="featuring">Book <strong><%= @venue.name %></strong> in <%= @venue.location %>!</h1>
+  <%= link_to "Go back", venue_path(@venue), class: "btn btn-flat col-12"%>
   <%= simple_form_for [@venue, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.submit "Add booking", class: "btn btn-flat" %>
+  <%= f.submit "Add booking", class: "btn btn-success text-white" %>
 <% end %>
 
 <br>
-<%= link_to "Back to venues", venue_path(@venue), class: "btn btn-flat"%>
+
+
 
 </div>

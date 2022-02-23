@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     # raise
     if @booking.save
       # redirect_to venue_booking_path(@venue, @booking)
-      redirect_to venue_path(@venue)
+      redirect_to venue_path(@venue), notice: "Your booking was successfully created!"
     else
       render :new
     end
