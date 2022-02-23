@@ -14,18 +14,76 @@
       <%= link_to "Explore Venues", venues_path, class: "btn btn-flat" %>
     </div>
   </div>
-  <div class="container">
-    <div class="row cards-list">
-      <div class="col-4 card">
-        <%= image_tag "icon.png", class: "mini-icon" %>
+  <div class= "container intro-section">
+    <div class="row home-icons">
+      <div class="col-sm-12 col-lg-4 home-icon">
+        <%= image_tag "tickets.png", class: "mini-icon" %>
+        <h1>Book your venue</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore (<%= link_to "venues", venues_path%>)</p>
       </div>
-      <div class="col-4 card">
+      <div class="col-sm-12 col-lg-4 home-icon">
         <%= image_tag "stage.png", class: "mini-icon" %>
+        <h1>Set your stage</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
       </div>
-      <div class="col-4 card">
+      <div class="col-sm-12 col-lg-4 home-icon">
         <%= image_tag "hands-up.png", class: "mini-icon" %>
+        <h1>Fans do the work</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
       </div>
     </div>
   </div>
+
+
+
+<div class="featuring">
+  <h1>Featured Venues</h1>
+</div>
+
+<div class="container">
+  <div class="row ">
+    <div class="col-sm-12 col-lg-6">
+       <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-trip-pricing">£99.99</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-6">
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-trip-pricing">£99.99</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    All rights reserved, <strong>Gig Planner</strong> made by <strong>MAG®</strong>
+  </div>
+</div>
 </body>
 </html>

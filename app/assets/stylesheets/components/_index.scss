@@ -6,3 +6,18 @@
 @import "header";
 @import "icon";
 @import "card";
+@import "footer";
+@import "cardtrip";
+
+
+.featuring {
+  h1 {
+    text-align: center;
+    color: #395B64;
+    font-size: 60px;
+    font-weight: 800;
+  }
+
+  margin-bottom: 30px;
+}
+

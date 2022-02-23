@@ -1,11 +1,17 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
 
-<%= simple_form_for [ @booking ] do |f| %>
+
+
+
+
+<div class="container">
+  <h1>Book <%= @venue.name %> in <%= @venue.location %>!</h1>
+  <%= simple_form_for [@venue, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.submit "add booking", class: "btn btn-primary" %>
+  <%= f.submit "Add booking", class: "btn btn-flat" %>
 <% end %>
 
 <br>
-<%= link_to "Back to Venue without booking", venue_path(@venue), class: "btn btn-primary"%>
+<%= link_to "Back to venues", venue_path(@venue), class: "btn btn-flat"%>
+
+</div>
