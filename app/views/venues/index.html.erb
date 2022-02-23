@@ -2,20 +2,17 @@
 
 <%= link_to "Go Home", root_path, class: "btn btn-flat"%>
 
-<div class="d-flex">
-    <div class="row">
-        <ul> <% @venues.each do |venue| %>
-        <div class="col-4">
-            <div class="card-trip">
-                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-                    <div class="card-product-infos">
-                        <h2>  <%= link_to venue.name, venue_path(venue) %> </h2>
-                        <p> <%= venue.price %>€ </p>
-                        <p> <%= venue.location %>€ </p>
-                    </div>
-            </div>
-        </div>
+<div class="content">
+    <div class="grid">
+        <% @venues.each do |venue| %>
+          <div class="card-trip">
+              <%= image_tag "https://picsum.photos/600/800" %>
+                  <div class="card-product-infos">
+                      <h2>  <%= link_to venue.name, venue_path(venue) %> </h2>
+                      <p> <%= venue.price %>€ per day</p>
+                      <p> <%= venue.location %></p>
+                  </div>
+          </div>
         <% end %>
-        </ul>
     </div>
 </div>
