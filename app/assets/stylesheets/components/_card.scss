@@ -6,8 +6,8 @@
 .grid {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
     padding: 0px 16px 16px 16px;
   }
 
@@ -61,7 +61,37 @@
   }
 
   #card-name {
-    text-align: center;
+    text-align: left;
     text-decoration: none;
-    margin: 4px;
+    margin: 10px 0px 3px 5px;
+    a {
+      color: #395B64;
+      font-size: 24px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #card-specs {
+    list-style: none;
+    position: relative;
+    p {
+
+    }
+
+  }
+
+  #location {
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+
+  #price {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    color: #395B64;
+    font-weight: bolder;
   }

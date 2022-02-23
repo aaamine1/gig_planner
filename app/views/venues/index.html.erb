@@ -16,11 +16,11 @@
           <div class="card-trip">
               <%= image_tag "https://picsum.photos/600/800" %>
                   <div class="card-product-infos">
-                      <h2 id="card-name" >  <%= link_to venue.name, venue_path(venue), style: "text-decoration:none" %> </h2>
-                      <ul>
-                        <li> <%= venue.price %>€ per day</li>
-                        <li> <%= venue.location %></li>
-                      </ul>
+                      <h2 id="card-name" >  <%= link_to venue.name, venue_path(venue), style: "" %> </h2>
+                      <div id="card-specs">
+                        <p id="location"> <%= venue.location %></p>
+                        <p id="price"><%= venue.price %>€</p>
+                      </div>
                   </div>
           </div>
         <% end %>
