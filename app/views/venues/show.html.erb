@@ -3,7 +3,7 @@
 <div class="container">
   <h1 class="featuring"><%= @venue.name %></h1>
 
-  <img class= "photo" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+  <%= cl_image_tag @venue.photo.key, height: 300, width: 400, crop: :fill %>
 
   <div class="card">
     <div classs="list">
