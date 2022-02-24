@@ -8,7 +8,9 @@
 require 'date'
 require 'rubocop-faker'
 require "open-uri"
-
+Booking.destroy_all
+Venue.destroy_all
+User.destroy_all
 
 locations = ["Anneessens, 1000 Brussels", "Rue Van Artevelde 45, 1000 Bruxelles",
   "DE SINGEL, Desguinlei, Antwerpen ",
