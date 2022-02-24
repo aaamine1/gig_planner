@@ -16,7 +16,9 @@
     background: white;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     border-radius: 3px;
-
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
   .card-trip > img {
@@ -90,4 +92,11 @@
     bottom: 0px;
     color: #395B64;
     font-weight: bolder;
+  }
+
+  .card-trip .card-trip-user {
+    position: absolute;
+    right: 16px;
+    top: -60px;
+    width: 40px;
   }
