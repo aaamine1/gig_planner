@@ -1,0 +1,35 @@
+<thead>
+  <th>Venue</th>
+  <th>user id</th>
+  <th>start date</th>
+  <th>end date</th>
+  <th>status</th>
+  <th> </th>
+  <th> </th>
+</thead>
+<tbody>
+  <% @my_pending_requests.each do |booking| %>
+  <tr>
+    <td>"Venue: " <%= booking.venue_id %></td>
+    <td>"user id: " <%= booking.user_id %></td>
+    <td>" start date: " <%= booking.start_date %></td>
+    <td> " end date: " <%= booking.end_date %></td>
+    <td>  " status: " <%= booking.status %></td>
+
+    <%= link_to 'Accept this booking', accept_booking_path(booking), method: :patch %>
+    <%= link_to 'Reject this booking', reject_booking_path(booking), method: :patch %>
+  </tr>
+  <% end %>
+
+</tbody>
+
+<tbody>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
