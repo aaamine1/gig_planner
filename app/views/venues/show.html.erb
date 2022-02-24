@@ -1,13 +1,12 @@
 
-
-<div class="container">
-  <h1 class="featuring"><%= @venue.name %></h1>
+<h1 class="featuring"><%= @venue.name %></h1>
+<div class="container-show">
 
 <div class="img-banner">
-  <%= cl_image_tag @venue.photo.key, height: 300, width: 100, crop: :fill %>
+  <%= cl_image_tag @venue.photo.key%>
 </div>
 
-  <div class="card">
+  <div class="card-show">
     <div classs="list">
       <ul id="ul">
         <li>price: <%= @venue.price%>€</li>
