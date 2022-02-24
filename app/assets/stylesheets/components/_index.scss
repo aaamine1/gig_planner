@@ -9,6 +9,7 @@
 @import "footer";
 @import "map";
 @import "show";
+@import "new_venue";
 
 .featuring {
   h1 {
@@ -20,4 +21,8 @@
     margin-bottom: 40px;
   }
   margin-bottom: 30px;
+}
+
+.footer {
+  margin-top: 15px;
 }
