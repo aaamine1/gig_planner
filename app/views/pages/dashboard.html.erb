@@ -4,9 +4,10 @@
 <h2>my bookings of other venues</h2>
 <ul>
   <% @my_bookings.each do |booking| %>
-  <li> "User id: " <%= booking.user_id %>
-  " start date: " <%= booking.start_date %>
-  " end date: " <%= booking.end_date %>
+  <li> User id: <%= booking.user_id %>
+  , start date: <%= booking.start_date %>
+  , end date: <%= booking.end_date %>
+  , status: <%= booking.status %>
   </li>
   <% end %>
 </ul>
@@ -14,8 +15,9 @@
 <h2>my venues</h2>
 <ul>
   <% @my_venues.each do |venue| %>
-  <li> "User id: " <%= venue.user_id %>
-  " name " <%= venue.name %>
+  <li> User id: <%= venue.user_id %>
+  , name: <%= venue.name %>
+  <%= link_to 'Destroy Venue', venue, method: :delete, data: { confirm: 'Are you sure?' } %>
   </li>
   <% end %>
 </ul>
@@ -23,10 +25,13 @@
 <h2>bookings others made for a venue of mine</h2>
 <ul>
   <% @my_pending_requests.each do |booking| %>
-  <li> "Venue: " <%= booking.venue_id %>
-  "user id: " <%= booking.user_id %>
-  " start date: " <%= booking.start_date %>
-  " end date: " <%= booking.end_date %>
+  <li> Venue: <%= booking.venue_id %>
+  , user id: <%= booking.user_id %>
+  , start date: <%= booking.start_date %>
+  , end date: <%= booking.end_date %>
+  , status: <%= booking.status %>
+  <%= link_to 'Accept this booking', accept_booking_path(booking), method: :patch %>
+  <%= link_to 'Reject this booking', reject_booking_path(booking), method: :patch %>
   </li>
   <% end %>
 </ul>
