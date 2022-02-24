@@ -21,7 +21,6 @@ class PagesController < ApplicationController
         @my_pending_requests << booking
       end
     end
-    # raise
   end
 # current_user.bookings # (my bookings of other venues)
 # current_user.venues # (my venues)

@@ -3,7 +3,9 @@
 <div class="container">
   <h1 class="featuring"><%= @venue.name %></h1>
 
-  <%= cl_image_tag @venue.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="img-banner">
+  <%= cl_image_tag @venue.photo.key, height: 300, width: 100, crop: :fill %>
+</div>
 
   <div class="card">
     <div classs="list">
