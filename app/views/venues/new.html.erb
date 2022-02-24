@@ -1,15 +1,32 @@
-<h1>Venues#new</h1>
-<p>Find me in app/views/venues/new.html.erb</p>
 
-<%= simple_form_for [ @venue ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :location %>
-  <%= f.input :capacity %>
-  <%= f.input :square_meter %>
-  <%= f.input :price %>
-  <%= f.input :image_url %>
-  <%= f.submit "add venue", class: "btn btn-primary" %>
-<% end %>
+<div class="containe-new-venue">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6 ">
+    <h1> Add a new venue to your collection ! </h1>
+    <br>
+      <%= link_to "Back to all venues", venues_path, class: "btn btn-primary col-12 mb-3"%>
+      <%= simple_form_for [ @venue ] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :location %>
+        <%= f.input :capacity %>
+        <%= f.input :square_meter %>
+        <%= f.input :price %>
+        <%= f.input :image_url %>
+        <%= f.submit "add venue", class: "btn btn-primary" %>
+      <% end %>
+    </div>  
+  </div>
+</div>
 
-<br>
-<%= link_to "Back to List Venues", venues_path, class: "btn btn-primary"%>
+ <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    All rights reserved, <strong>Gig Planner</strong> made by <strong>MAG®</strong>
+  </div>
+</div>
+
+
