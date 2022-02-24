@@ -4,15 +4,14 @@ Rails.application.routes.draw do
   resources :venues do
     resources :bookings, only: [:new, :create]
   end
-    get '/dashboard', to: 'pages#dashboard', as: :dashboard
+  get '/dashboard', to: 'pages#dashboard', as: :dashboard
+  patch 'bookings/:id/accept', to: 'bookings#accept', as: :accept_booking
+  patch 'bookings/:id/reject', to: 'bookings#reject', as: :reject_booking
+  # get 'bookings(/:booking_id)', to: 'pages#accept', as: :accept_booking
 end
 
 
   # # index for all bookings for current_user
-  # patch 'bookings/:id/accept', to: 'bookings#accept', as: :accept_booking
-  # patch 'bookings/:id/reject', to: 'bookings#reject', as: :reject_booking
-  # # get 'bookings(/:booking_id)', to: 'pages#accept', as: :accept_booking
-
 
 # current_user.bookings # (my bookings of other venues)
 # current_user.venues # (my venues)

@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2022_02_23_150642) do
     t.string "image_url", default: "https://lorempixel.com/730/411"
     t.float "latitude"
     t.float "longitude"
-    t.index ["user_id"], name: "index_venues_on_user_id"
+      t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
   add_foreign_key "bookings", "users"

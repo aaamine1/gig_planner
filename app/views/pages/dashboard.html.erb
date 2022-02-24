@@ -1,0 +1,32 @@
+<h1>Dashboard</h1>
+<p>Welcome to your dashboard</p>
+
+<h2>my bookings of other venues</h2>
+<ul>
+  <% @my_bookings.each do |booking| %>
+  <li> "User id: " <%= booking.user_id %>
+  " start date: " <%= booking.start_date %>
+  " end date: " <%= booking.end_date %>
+  </li>
+  <% end %>
+</ul>
+
+<h2>my venues</h2>
+<ul>
+  <% @my_venues.each do |venue| %>
+  <li> "User id: " <%= venue.user_id %>
+  " name " <%= venue.name %>
+  </li>
+  <% end %>
+</ul>
+
+<h2>bookings others made for a venue of mine</h2>
+<ul>
+  <% @my_pending_requests.each do |booking| %>
+  <li> "Venue: " <%= booking.venue_id %>
+  "user id: " <%= booking.user_id %>
+  " start date: " <%= booking.start_date %>
+  " end date: " <%= booking.end_date %>
+  </li>
+  <% end %>
+</ul>
