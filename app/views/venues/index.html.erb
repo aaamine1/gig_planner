@@ -9,18 +9,20 @@
     <div class="grid">
 
         <% @venues.each do |venue| %>
-          <div class="card-trip">
-            <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
-              <%# <%= image_tag "https://picsum.photos/600/800" %>
-                  <div class="card-product-infos">
-                      <h2 id="card-name" >  <%= link_to venue.name, venue_path(venue) %> </h2>
-                      <div id="card-specs">
-                        <p id="location"> <%= venue.location %></p>
-                        <p id="price"><%= venue.price %>€</p>
-                        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-                      </div>
-                  </div>
-          </div>
+          <%= link_to venue_path(venue) do %>
+            <div class="card-trip">
+              <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
+                <%# <%= image_tag "https://picsum.photos/600/800" %>
+                    <div class="card-product-infos">
+                        <h2 id="card-name" > <%= venue.name %> </h2>
+                        <div id="card-specs">
+                          <p id="location"> <%= venue.location %></p>
+                          <p id="price"><%= venue.price %>€</p>
+                          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+                        </div>
+                    </div>
+            </div>
+          <% end %>
         <% end %>
 
     </div>

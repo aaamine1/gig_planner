@@ -1,13 +1,38 @@
-.featuring {
+  .featuring-header {
       text-align: center;
       color: #395B64;
       font-size: 60px;
       font-weight: 800;
       margin-top: 15px;
+      margin-bottom: 22px;
   }
 
-  .img-banner {
+  .container-show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+
+  .img-banner{
+    width: 50%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .img-banner img {
     width: 100%;
+    border-radius: 3px;
+
+  }
+
+  .card-show {
+    border-radius: 3px;
+    background-color: white;
+    margin-right: 15px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .photo {
@@ -23,11 +48,17 @@
   }
 
   #ul {
-    margin: 15px;
+    margin: 20px;
+    
   }
 
-  .btn {
+  #button-book {
     align-items: center;
     margin-bottom: 5px;
     margin-left: 25px;
+    width: 84%;
+  }
+
+  .buttons {
+    margin-bottom: 13px;
   }
