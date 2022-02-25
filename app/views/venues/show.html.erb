@@ -1,26 +1,28 @@
 
 
-<div class="container">
-  <h1 class="featuring"><%= @venue.name %></h1>
+<h1 class="featuring-header"><%= @venue.name %></h1>
 
-<div class="img-banner">
-  <%= cl_image_tag @venue.photo.key, height: 300, width: 100, crop: :fill %>
-</div>
+<div class="container-show">
+  <div class="img-banner">
+    <%= cl_image_tag @venue.photo.key%>
+  </div>
 
-  <div class="card">
+  <div class="card-show">
     <div classs="list">
-      <ul id="ul">
-        <li>price: <%= @venue.price%>€</li>
-        <li>size: <%= @venue.square_meter%>sqm.</li>
-        <li>capacity: <%= @venue.capacity%> person</li>
-        <li>city: <%= @venue.location%> </li>
-        <%# <li> <%= @venue.status%>  </li>
-      </ul>
+      <div id="ul">
+        <i class="fa-solid fa-money-bill"> </i> <%= @venue.price%> € </p> 
+        <i class="fa-solid fa-building-columns"> </i>  <%= @venue.square_meter%> sqm. </p>
+        <i class="fa-solid fa-users"> </i>  <%= @venue.capacity%> ppl. </p>
+        <i class="fa-solid fa-location-dot"> </i>  <%= @venue.location%> </p>
+      </div>
     </div>
 
     <div class="buttons">
-      <%= link_to "Book this!", new_venue_booking_path(@venue), class: "btn btn-success"%>
-      <%= link_to "Delete this Venue", venue_path(@venue), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this venue?" } %>
+      <% if @venue.user.id == current_user%>
+        <%= link_to "Delete this Venue", venue_path(@venue), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this venue?" } %>
+      <% else %>
+        <%= link_to "Book this venue!", new_venue_booking_path(@venue), class: "btn btn-success", id: "button-book"%>
+      <% end %>
     </div>
   </div>
 </div>
