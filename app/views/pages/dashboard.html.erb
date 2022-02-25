@@ -1,37 +1,61 @@
-<h1>Dashboard</h1>
-<p>Welcome to your dashboard!</p>
+<h1 class="featuring">Dashboard</h1>
 
-<h2>my bookings of other venues</h2>
-<ul>
-  <% @my_bookings.each do |booking| %>
-  <li> User id: <%= booking.user_id %>
-  , start date: <%= booking.start_date %>
-  , end date: <%= booking.end_date %>
-  , status: <%= booking.status %>
-  </li>
-  <% end %>
-</ul>
 
-<h2>my venues</h2>
-<ul>
-  <% @my_venues.each do |venue| %>
-  <li> User id: <%= venue.user_id %>
-  , name: <%= venue.name %>
-  <%= link_to 'Destroy Venue', venue, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </li>
-  <% end %>
-</ul>
+<h1 class="featuring2">My bookings</h1>
+  <div class="content">
+    <div class="grid3">
+    <% @my_bookings.each do |booking| %>
+      <div class="card-trip">
+        <div class="card-trip-infos">
+            <strong><%= (Venue.find(booking.venue_id)).name %> </strong>
+            From: <%= booking.start_date %>
+            To: <%= booking.end_date %>
+            Status: <%= booking.status %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
 
-<h2>bookings others made for a venue of mine</h2>
-<ul>
-  <% @my_pending_requests.each do |booking| %>
-  <li> Venue: <%= booking.venue_id %>
-  , user id: <%= booking.user_id %>
-  , start date: <%= booking.start_date %>
-  , end date: <%= booking.end_date %>
-  , status: <%= booking.status %>
-  <%= link_to 'Accept this booking', accept_booking_path(booking), method: :patch %>
-  <%= link_to 'Reject this booking', reject_booking_path(booking), method: :patch %>
-  </li>
-  <% end %>
-</ul>
+
+<div class="content">
+  <div class="row">
+    <h1 class="featuring2">My venues</h1>
+    <div class="grid2">
+      <% @my_venues.each do |venue| %>
+        <div class="card-trip ">
+              <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
+                <%# <%= image_tag "https://picsum.photos/600/800" %>
+                    <div class="card-product-infos">
+                        <h2 id="card-name" >  <%= link_to venue.name, venue_path(venue) %> </h2>
+                        <div id="card-specs">
+                          <p id="location"> <%= venue.location %></p> <br>
+                          <p id="price"><%= link_to 'Destroy Venue', venue, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+                        </div>
+                    </div>
+        </div>
+    <% end %>
+    </div>
+  </div>
+  <%# <h2 class="featuring">Booking requests</h2> %>
+
+  <div class="content">
+
+    <div class="grid3">
+     <h1 class="featuring2">My booking requests</h1>
+    <% @my_pending_requests.each do |booking| %>
+
+      <div class="card-booking">
+        <div class="card-trip-infos">
+          <strong><%= (Venue.find(booking.venue_id)).name %> </strong><br>
+          From: <%= booking.start_date %> <br>
+          To: <%= booking.end_date %> <br>
+          Status: <%= booking.status %>
+        </div>
+      <%= link_to 'Accept this booking', accept_booking_path(booking), method: :patch, class: "btn btn-outline-success m-0" %>
+      <%= link_to 'Reject this booking', reject_booking_path(booking), method: :patch, class: "btn btn-outline-danger m-0" %>
+      </div>
+    <% end %>
+  </div>
+</div>

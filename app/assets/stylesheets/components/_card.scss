@@ -15,6 +15,22 @@ a {
     padding: 0px 16px 16px 16px;
   }
 
+  .grid2 {
+    flex-grow: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 16px;
+      padding: 0px 16px 16px 16px;
+  }
+
+  .grid3 {
+    flex-grow: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+      padding: 0px 16px 16px 16px;
+  }
+
 .card-trip {
     overflow: hidden;
     background: white;
@@ -113,3 +129,12 @@ a {
     top: -60px;
     width: 40px;
   }
+
+  .card-booking {
+    background-color: white;
+    padding: 16px;
+    border-radius: 5%;
+    flex-direction: column  ;
+
+  }
+

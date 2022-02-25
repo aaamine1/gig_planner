@@ -10,8 +10,10 @@
 @import "map";
 @import "show";
 @import "new_venue";
+@import "marker";
 
 .featuring {
+
   h1 {
     text-align: center;
     color: #395B64;
@@ -25,4 +27,10 @@
 
 .footer {
   margin-top: 15px;
+}
+
+.featuring2 {
+  color: #395B64;
+  margin-left: 15px;
+  font-weight: 700;
 }
