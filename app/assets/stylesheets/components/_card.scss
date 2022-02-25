@@ -3,6 +3,10 @@
 .content {
     display: flex;
 }
+
+a {
+  text-decoration: none !important;
+}
 .grid {
     flex-grow: 1;
     display: grid;
@@ -15,10 +19,14 @@
     overflow: hidden;
     background: white;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    text-decoration: none;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     position: relative;
+    a {
+      text-decoration: none;
+    }
 }
 
   .card-trip > img {
@@ -35,6 +43,7 @@
 
   .card-trip p {
     font-size: 16px;
+    text-decoration: none;
     opacity: .7;
     margin: 0;
   }
@@ -65,6 +74,7 @@
   #card-name {
     text-align: left;
     text-decoration: none;
+    color: #395B64;
     margin: 10px 0px 3px 5px;
     a {
       color: #395B64;
@@ -84,7 +94,10 @@
   #location {
     margin-bottom: 10px;
     margin-left: 5px;
+    color: #395B64;
+    text-decoration: none;
   }
+
 
   #price {
     position: absolute;
